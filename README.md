@@ -48,10 +48,10 @@ docker build -t lesson-apis .
 ## Ejecutar el contenedor
 
 ```bash
-docker run -d -p 3000:3000 --name lesson-apis lesson-apis
+docker run -d -p 8080:8080 --name lesson-apis lesson-apis
 ```
 
-Si la aplicación utiliza otro puerto, reemplazar el puerto **3000** por el correspondiente.
+Si la aplicación utiliza otro puerto, reemplazar el puerto **8080** por el correspondiente.
 
 ---
 
@@ -64,7 +64,8 @@ docker pull m3nm4/lesson-apis:latest
 Posteriormente ejecutar:
 
 ```bash
-docker run -d -p 3000:3000 m3nm4/lesson-apis:latest
+docker run -d -p 8080:8080 --name lesson-apis m3nm4/lesson-apis:latest
+
 ```
 
 ---
@@ -127,7 +128,9 @@ Elimina el estudiante cuyo identificador es 5.
 
 ---
 
-# Autor
+# Capturas 
+<img width="1627" height="983" alt="image" src="https://github.com/user-attachments/assets/05657120-26d5-4a2a-a23b-281c785d1df0" />
+<img width="1542" height="983" alt="image" src="https://github.com/user-attachments/assets/6ae4219c-d7d0-402c-b863-26f6119774d7" />
+z<img width="1517" height="987" alt="image" src="https://github.com/user-attachments/assets/bedf1e60-fe8d-4074-be42-be87bb7dc0ff" />
 
-Estudiante de Ingeniería de Software  
-Universidad de las Fuerzas Armadas ESPE
+
