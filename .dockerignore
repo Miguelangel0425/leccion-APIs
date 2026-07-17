@@ -1,0 +1,30 @@
+# Dependencias
+node_modules
+
+# Git
+.git
+.gitignore
+
+# VS Code
+.vscode
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Variables de entorno
+.env
+.env.*
+
+# Documentación
+README.md
+
+# Docker
+Dockerfile
+# Archivos temporales
+coverage
+.cache
