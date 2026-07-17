@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSONPlaceholder API - TypeScript</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>📡 JSONPlaceholder API</h1>
+            <p class="subtitle">Consumo de API REST con TypeScript (NodeNext)</p>
+        </header>
+
+        <!-- Panel de Control -->
+        <section class="control-panel">
+            <div class="panel-grid">
+                <!-- Cargar todas las publicaciones -->
+                <div class="panel-card">
+                    <h3>📋 Listar Publicaciones</h3>
+                    <button id="btn-load-all" class="btn btn-primary">Cargar Todas</button>
+                </div>
+
+                <!-- Consultar por ID -->
+                <div class="panel-card">
+                    <h3>🔍 Consultar por ID</h3>
+                    <form id="search-form" class="form-inline">
+                        <input type="number" id="search-id" placeholder="ID" min="1" required />
+                        <button type="submit" class="btn btn-secondary">Buscar</button>
+                    </form>
+                </div>
+
+                <!-- Filtrar por usuario -->
+                <div class="panel-card">
+                    <h3>👤 Filtrar por Usuario</h3>
+                    <form id="filter-form" class="form-inline">
+                        <input type="number" id="filter-user" placeholder="User ID" min="1" required />
+                        <button type="submit" class="btn btn-secondary">Filtrar</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Operaciones de escritura -->
+            <div class="panel-grid">
+                <!-- Crear publicación -->
+                <div class="panel-card">
+                    <h3>✏️ Crear Publicación</h3>
+                    <form id="create-form" class="form-vertical">
+                        <input type="text" id="create-title" placeholder="Título" required />
+                        <textarea id="create-body" placeholder="Contenido" rows="3" required></textarea>
+                        <input type="number" id="create-user" placeholder="User ID" min="1" required />
+                        <button type="submit" class="btn btn-success">Crear</button>
+                    </form>
+                </div>
+
+                <!-- Actualizar título -->
+                <div class="panel-card">
+                    <h3>📝 Actualizar Título</h3>
+                    <form id="update-form" class="form-vertical">
+                        <input type="number" id="update-id" placeholder="ID de publicación" min="1" required />
+                        <input type="text" id="update-title" placeholder="Nuevo título" required />
+                        <button type="submit" class="btn btn-warning">Actualizar</button>
+                    </form>
+                </div>
+
+                <!-- Eliminar publicación -->
+                <div class="panel-card">
+                    <h3>🗑️ Eliminar Publicación</h3>
+                    <form id="delete-form" class="form-vertical">
+                        <input type="number" id="delete-id" placeholder="ID de publicación" min="1" required />
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contenedor de resultados -->
+        <section class="results-container">
+            <h2>Resultados</h2>
+            <div id="posts-container" class="posts-container">
+                <div class="alert alert-info">
+                    💡 Presiona "Cargar Todas" para ver las publicaciones
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Desarrollado con TypeScript (NodeNext) | JSONPlaceholder API</p>
+        </footer>
+    </div>
+
+    <!-- Cargar los scripts compilados -->
+    <script type="module" src="dist/app.js"></script>
+</body>
+
+</html>
